@@ -1,0 +1,93 @@
+/* Bottom Navigation Styles */
+.bottom-nav {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background-color: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    padding: 0.5rem 1.2rem; /* Reduced padding to make the nav smaller */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease, transform 0.2s ease;
+}
+
+/* Expansion effect on hover */
+.bottom-nav:hover {
+    padding: 0.6rem 1.4rem; /* Reduced padding on hover as well */
+    transform: translateX(-50%) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem; /* Reduced gap between navigation items */
+}
+
+.bottom-nav .nav-item {
+    color: var(--text-color);
+    font-size: 1.1rem; /* Reduced font size */
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    padding: 0.25rem 0.35rem; /* Smaller padding */
+    border-radius: 8px;
+    text-shadow: none;
+}
+
+.bottom-nav .nav-item:hover {
+    color: var(--accent-color);
+    transform: scale(1.15);
+    text-shadow: none;
+}
+
+/* Active state styling */
+.bottom-nav .nav-item.active {
+    transform: scale(1.05);
+}
+
+/* Add a subtle pop effect for the icons */
+.bottom-nav .nav-item i {
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-shadow: none;
+}
+
+/* Enhanced effect for all icons (same as GitHub icon) */
+.bottom-nav .nav-item:hover i {
+    transform: translateY(-2px) scale(1.15);
+    color: var(--accent-color);
+    filter: drop-shadow(0 2px 4px rgba(77, 166, 255, 0.4));
+}
+
+.nav-divider {
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 100;
+    transition: all 0.3s ease;
+}
+
+/* Enhance the divider on hover of adjacent nav items */
+.bottom-nav .nav-item:hover + .nav-divider,
+.nav-divider:has(+ .nav-item:hover) {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+@media screen and (max-width: 480px) {
+    .bottom-nav {
+        padding: 0.6rem 1.2rem;
+        bottom: 1.5rem;
+    }
+    
+    .nav-container {
+        gap: 1.2rem;
+    }
+    
+    .bottom-nav .nav-item {
+        font-size: 1rem;
+    }
+}
