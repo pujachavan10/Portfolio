@@ -1,0 +1,12 @@
+<!-- 
+Instructions for creating a proper favicon.ico:
+
+1. Visit https://favicon.io/emoji-favicons/ and search for "seedling" emoji
+   OR
+2. Use an online tool like https://convertio.co/ to convert the emoji to an .ico file:
+   - Create a text file with just the 🌱 emoji
+   - Save it as a PNG (64x64)
+   - Convert the PNG to ICO format
+
+3. Place the resulting favicon.ico file in the root directory of your website
+-->
